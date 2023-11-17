@@ -1,0 +1,13 @@
+xhost +local:docker
+
+nvidia-docker run --privileged -it \
+           -e NVIDIA_DRIVER_CAPABILITIES=all \
+           -e NVIDIA_VISIBLE_DEVICES=all \
+           --volume=/home/leejaewon20/cilab/SLAM_ICCV/FAST_LIO:/home/catkin_ws/src \
+           --volume=/tmp/.X11-unix:/tmp/.X11-unix:rw \
+           --net=host \
+           --ipc=host \
+           --shm-size=2g \
+           --name=fast-lio \
+           --env="DISPLAY=$DISPLAY" \
+           fast-lio:latest /bin/bash

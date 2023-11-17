@@ -1,0 +1,3 @@
+python scripts_mcl/run_mcl.py -c /root/workspace/src/data/experiments/pretrained_models/mcl2d/best.ckpt -i /root/workspace/src/data/indoor_scan_poses_2d/seq1 -cal /root/workspace/src/data/indoor_scan_poses_2d/base2laser.txt -o out_poses.txt
+
+/home/leejaewon20/cilab/LocNDF/data/experiments/pretrained_models/mcl2d/best.ckpt
