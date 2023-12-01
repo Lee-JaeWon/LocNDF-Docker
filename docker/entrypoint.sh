@@ -15,6 +15,11 @@ cd /root/workspace/src
 pip install .
 pip install -r requirements.txt
 
+git config --global --add safe.directory /root/workspace/src
+
+pip install -U tensorboardX
+
+
 echo "============== LocNDF Docker Env Ready================"
 
 cd /root/workspace

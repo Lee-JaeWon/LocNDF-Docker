@@ -25,6 +25,7 @@ nvidia-docker run --privileged -it \
            -e NVIDIA_DRIVER_CAPABILITIES=all \
            -e NVIDIA_VISIBLE_DEVICES=all \
            --volume="$PROJECT_DIR:/root/workspace/src" \
+           --volume=/media/leejaewon20/leejaewon_external/CILAB/Dataset/For_LocNDF:/root/workspace/src/data \
            --volume=/tmp/.X11-unix:/tmp/.X11-unix:rw \
            --net=host \
            --ipc=host \

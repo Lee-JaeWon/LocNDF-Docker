@@ -7,13 +7,20 @@ RUN apt-get -y update
 RUN apt-get -y install python3.9
 RUN apt-get -y install python3-pip
 
+RUN apt-get -y update
+RUN apt-get install -y git
+
 # Python version
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1
 RUN python -m pip install --upgrade pip
 
 # Dependency
+RUN apt-get install -y python3.9-dev
+RUN apt-get install -y python3-tk
 RUN apt-get install -y libgl1-mesa-glx libx11-dev
 RUN ldconfig
+
+RUN apt-get install -y libfreetype6-dev libfontconfig1-dev
 
 WORKDIR /root/workspace/src
 
